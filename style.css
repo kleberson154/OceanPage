@@ -16,11 +16,11 @@ img {
   top: 0;
   left: 0;
   overflow: hidden;
-  height: 100vh;
+  height: max-content;
 }
 
 .hero__background {
-  position: absolute;
+  position: relative;
   top: 0;
   left: 0;
   width: 100%;
@@ -44,6 +44,7 @@ img {
   align-items: center;
   flex-direction: column;
   gap: 2rem;
+  padding: 0 15%;
 }
 
 .hero__title {
@@ -58,7 +59,7 @@ img {
 
 .section {
   background-color: #000;
-  padding: 0 15% 6rem;
+  padding: 6rem 15% 0;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -113,11 +114,12 @@ a {
 footer {
   background-color: #000;
   text-align: center;
-  padding-bottom: 2rem;
+  padding: 6rem 0 2rem;
 }
 
 .gallery {
   display: flex;
+  flex-wrap: wrap;
   justify-content: center;
   align-items: center;
   gap: 2rem;
@@ -161,4 +163,52 @@ footer {
 .position2 {
   top: 6px;
   left: 14px;
+}
+
+@media (max-width: 1150px) {
+  .hero__title {
+    font-size: 2.5rem;
+  }
+
+  .hero__text {
+    font-size: 1rem;
+  }
+
+  .section__title {
+    font-size: 2rem;
+  }
+
+  .section__text {
+    font-size: 0.9rem;
+  }
+
+  .section__content {
+    flex-direction: column;
+    align-items: center;
+    gap: 2rem;
+    height: auto;
+  }
+
+  .section__img-inline {
+    width: 100%;
+    height: auto;
+  }
+}
+
+@media (max-width: 400px) {
+  .hero__title {
+    font-size: 2rem;
+  }
+
+  .hero__text {
+    font-size: 0.8rem;
+  }
+
+  .section__title {
+    font-size: 1.5rem;
+  }
+
+  .section__text {
+    font-size: 0.8rem;
+  }
 }
